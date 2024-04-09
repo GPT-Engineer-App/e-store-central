@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Heading, Text, Image, Grid, Button, Stack, Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure, Badge } from "@chakra-ui/react";
 import { FaShoppingCart } from "react-icons/fa";
+import Header from "../components/Header";
 
 const products = [
   {
@@ -40,8 +41,8 @@ const Index = () => {
 
   return (
     <Box>
-      <Box bg="gray.100" p={4} display="flex" justifyContent="space-between" alignItems="center">
-        <Heading>My Estore</Heading>
+      <Header />
+      <Box p={4} display="flex" justifyContent="flex-end">
         <Button leftIcon={<FaShoppingCart />} onClick={onOpen}>
           Cart ({cart.length})
         </Button>
